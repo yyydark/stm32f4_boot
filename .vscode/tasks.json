@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+        "label": "build",
+        "type": "shell",
+        "command": "make",
+        "args": [
+
+        ],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+      },
+      {
+        "label": "download",
+        "type": "shell",
+        "command": "make",
+        "args": [
+            "download"
+        ],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+    }
+    }
+    ]
+  }
+  
