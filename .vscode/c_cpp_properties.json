@@ -15,9 +15,7 @@
             "defines": [
                 "STM32F40_41xxx",
                 "USE_STDPERIPH_DRIVER",
-                "DEBUG",
-                "MISSING_SYSCALL_NAMES",
-                "_COMPILING_NEWLIB"
+                "DEBUG"
             ],
             "compilerPath": "/home/yyyy/stm32f4_boot/tools/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc",
             "cStandard": "c99",
