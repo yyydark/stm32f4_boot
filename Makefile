@@ -4,6 +4,8 @@ MAKEFLAGS += -rR
 
 PROJECT_NAME := bulid
 
+PWD := $(shell pwd)
+
 ifeq ($(CONFIG_BOOTLOADER), y)
 TARGET ?= boot
 else
@@ -169,3 +171,4 @@ test:
 
 download:
 	$(QUITE)openocd $(D_FLAGS)
+

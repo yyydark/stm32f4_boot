@@ -1,34 +1,3 @@
-/**
-  ******************************************************************************
-  * @file      startup_stm32f40_41xxx.s
-  * @author    MCD Application Team
-  * @version   V1.8.1
-  * @date      27-January-2022
-  * @brief     STM32F40xxx/41xxx Devices vector table for RIDE7 toolchain.
-  *            Same as startup_stm32f40xx.s and maintained for legacy purpose
-  *            This module performs:
-  *                - Set the initial SP
-  *                - Set the initial PC == Reset_Handler,
-  *                - Set the vector table entries with the exceptions ISR address
-  *                - Configure the clock system and the external SRAM mounted on
-  *                  STM324xG-EVAL board to be used as data memory (optional,
-  *                  to be enabled by user)
-  *                - Branches to main in the C library (which eventually
-  *                  calls main()).
-  *            After Reset the Cortex-M4 processor is in Thread mode,
-  *            priority is Privileged, and the Stack is set to Main.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2016 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
 
   .syntax unified
   .cpu cortex-m4
