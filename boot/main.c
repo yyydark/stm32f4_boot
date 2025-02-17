@@ -1,10 +1,16 @@
-#include <stdint.h>
-#include <stdbool.h>
-#include <stdlib.h>
-#include "stm32f4xx.h"
+#include "main.h"
 
 int main(void)
 {
+    board_init();
+
+    LCD_Init();
+    LCD_DisplayOn();
+    LCD_Clear(BLACK);
+    LCD_ShowString(0, 0, 16, 16, 16, (uint8_t*)"Hello, World!");
+
+    i2c_init();
+    i2c_start();
     while(1)
     {
         ;

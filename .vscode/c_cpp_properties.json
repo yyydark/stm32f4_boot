@@ -10,7 +10,9 @@
                 "driver/led",
                 "driver/LCD",
                 "driver/led",
-                "driver/delay"
+                "driver/delay",
+                "driver/i2c",
+                "boot/inc"
             ],
             "defines": [
                 "STM32F40_41xxx",

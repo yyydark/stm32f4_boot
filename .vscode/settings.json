@@ -1,7 +1,11 @@
 {
     "files.associations": {
+        "*.c": "c",
         "stm32f4xx.h": "c",
         "led.h": "c",
-        "delay.h": "c"
+        "delay.h": "c",
+        "soft_i2c.h": "c",
+        "main.h": "c",
+        "stdint.h": "c"
     }
 }
