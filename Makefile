@@ -24,7 +24,7 @@ else
 BUILD := $(BUILD_BASE)/$(PROJECT_NAME)
 endif
 
-DEBUG ?=
+DEBUG ?= y
 V ?=
 
 CROSS_COMPILE ?= tools/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-
@@ -56,24 +56,32 @@ P_DEF += DEBUG
 endif
 
 s_inc-y = boot \
+		  boot/inc \
 		  boot/override \
 		  platform/cmsis/core \
 		  platform/cmsis/device \
 		  platform/driver/inc \
 		  driver/led \
-		  driver/delay
+		  driver/delay \
+		  driver/i2c \
+		  driver/LCD \
+		  driver/usart
 
 s_dir-y = boot \
+		  boot/inc \
 		  boot/override \
 		  platform/cmsis/core \
 		  platform/cmsis/device \
 		  platform/driver/src \
 		  driver/led \
-		  driver/delay
+		  driver/delay \
+		  driver/i2c \
+		  driver/LCD \
+		  driver/usart
 
 ifeq ($(DEBUG), y)
 
-s_src-y += debug
+# s_src-y += debug
 
 endif
 
@@ -87,9 +95,11 @@ A_FLAGS = $(MCU) -g
 C_FLAGS = $(MCU) -g
 C_FLAGS += -std=gnu11
 C_FLAGS += -ffunction-sections -fdata-sections -fno-builtin -fno-strict-aliasing
-C_FLAGS += -Wall -Werror
+# C_FLAGS += -Wall -Werror
+
+
 ifeq ($(DEBUG), y)
-C_FLAGS += -Wno-unused-variable -Wno-comment -Wno-unused-function -Wno-unused-value
+C_FLAGS += -Wno-unused-variable -Wno-comment -Wno-unused-function -Wno-unused-value -Wno-unused-but-set-variabl
 endif
 C_FLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 

@@ -6,6 +6,8 @@
         "delay.h": "c",
         "soft_i2c.h": "c",
         "main.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "i2c.h": "c",
+        "stdbool.h": "c"
     }
 }

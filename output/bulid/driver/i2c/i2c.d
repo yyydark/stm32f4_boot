@@ -1,4 +1,4 @@
-output/bulid/boot/main.o: boot/main.c boot/inc/main.h \
+output/bulid/driver/i2c/i2c.o: driver/i2c/i2c.c driver/i2c/i2c.h \
  platform/cmsis/device/stm32f4xx.h platform/cmsis/core/core_cm4.h \
  platform/cmsis/core/core_cmInstr.h platform/cmsis/core/core_cmFunc.h \
  platform/cmsis/core/core_cmSimd.h \
@@ -20,8 +20,8 @@ output/bulid/boot/main.o: boot/main.c boot/inc/main.h \
  platform/driver/inc/stm32f4xx_hash.h platform/driver/inc/stm32f4xx_rng.h \
  platform/driver/inc/stm32f4xx_can.h platform/driver/inc/stm32f4xx_dac.h \
  platform/driver/inc/stm32f4xx_dcmi.h \
- platform/driver/inc/stm32f4xx_fsmc.h driver/i2c/i2c.h driver/LCD/lcd.h
-boot/inc/main.h:
+ platform/driver/inc/stm32f4xx_fsmc.h
+driver/i2c/i2c.h:
 platform/cmsis/device/stm32f4xx.h:
 platform/cmsis/core/core_cm4.h:
 platform/cmsis/core/core_cmInstr.h:
@@ -55,5 +55,3 @@ platform/driver/inc/stm32f4xx_can.h:
 platform/driver/inc/stm32f4xx_dac.h:
 platform/driver/inc/stm32f4xx_dcmi.h:
 platform/driver/inc/stm32f4xx_fsmc.h:
-driver/i2c/i2c.h:
-driver/LCD/lcd.h:

@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    board_init();
+    board_lowlevel_init();
 
     LCD_Init();
     LCD_DisplayOn();
@@ -11,8 +11,9 @@ int main(void)
 
     i2c_init();
     i2c_start();
-    while(1)
+    while(1)    
     {
         ;
     }
+    return 0;
 }
